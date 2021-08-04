@@ -2,7 +2,22 @@
   <head>
     <title>Invert camera</title>
     <style type="text/css">
-        video{ filter: invert(100%);}
+	    video { 
+			position: fixed;
+			right: 0;
+			bottom: 0;
+			min-width: 100%;
+			min-height: 100%;
+			width: auto;
+			height: auto;
+			z-index: -100;
+			background-size: cover;
+			transition: 1s opacity;
+			-moz-transform: scale(-1, 1); 
+			-webkit-transform: scale(-1, 1); -o-transform: scale(-1, 1); 
+			transform: scale(-1, 1); filter: FlipH;
+		    filter: invert(100%);
+		}
         
     </style>
 </head>
